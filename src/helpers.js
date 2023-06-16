@@ -2,21 +2,15 @@ const mysql = require('mysql');
 
 const pool = mysql.createPool({
   connectionLimit: 10,
-  // host: '34.101.149.199',
+  host: '34.128.66.29',
   user: 'konseria-admin',
   password: 'konseria-admin', // ganti password yg terakhir
   database: 'konseriadb',
-  socketPath: '/cloudsql/konseria-389710:asia-southeast2:konseriadb',
+  socketPath: '/cloudsql/konseria-fix:asia-southeast2:konseriadb-instance',
   connectTimeout: 10000, // 10 seconds
   waitForConnections: true, // Default: true
   queueLimit: 0, // Default: 0
 });
-// const pool = mysql.createPool({
-//   host: 'localhost',
-//   user: 'root',
-//   password: '',
-//   database: 'konseriadb'
-// });
 
 // Helper function (memanggil koneksi dari connection pool)
 const getConnectionFromPool = () => new Promise((resolve, reject) => {
