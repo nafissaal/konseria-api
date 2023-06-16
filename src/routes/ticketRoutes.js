@@ -54,4 +54,3 @@ const ticketRoutes = [
 ];
 
 module.exports = ticketRoutes;
-

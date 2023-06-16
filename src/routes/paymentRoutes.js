@@ -39,4 +39,3 @@ const paymentRoutes = [
 ];
 
 module.exports = paymentRoutes;
-
